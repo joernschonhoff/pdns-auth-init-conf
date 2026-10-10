@@ -10,31 +10,7 @@
   "commitMessageAction": "update",
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "to {{newVersion}}",
-  "customManagers": [
-    {
-      "customType": "regex",
-      "description": "Extract regctl version from .gitlab-ci.yml",
-      "managerFilePatterns": [
-        "/^\\.gitlab-ci\\.yml$/"
-      ],
-      "matchStrings": [
-        "REGCTL_VERSION: (?<currentValue>v\\d+\\.\\d+\\.\\d+)"
-      ],
-      "datasourceTemplate": "github-releases",
-      "depNameTemplate": "regclient/regclient"
-    }
-  ],
   "packageRules": [
-    {
-      "description": "regctl version - update REGCTL_VERSION in .gitlab-ci.yml",
-      "matchFileNames": [
-        ".gitlab-ci.yml"
-      ],
-      "matchDepNames": [
-        "regclient/regclient"
-      ],
-      "commitMessageTopic": "regctl"
-    },
     {
       "description": "Auto-merge minor/patch/pin updates once CI passes",
       "matchUpdateTypes": ["minor", "patch", "pin"],
