@@ -1,4 +1,4 @@
-FROM hairyhenderson/gomplate:v5.2.0-alpine@sha256:045133ce57ef6242787099a99362c4f5e02b6472f1466ddc84cb244426a87fef
+FROM hairyhenderson/gomplate:v5.3.0-alpine@sha256:f592776a7465f3126350fbf78a8147e2b82e636a94698d9adf637e66aba4cb69
 
 COPY pdns.conf.tpl /pdns.conf.tpl
 
